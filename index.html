@@ -5,176 +5,201 @@
   <title>Sahrash Fatima – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; background: #ffe9e3; color: #222; margin: 0; }
-    nav {
-      display: flex; justify-content: space-between; align-items: center;
-      background: #e69986; padding: 15px 40px; border-radius: 0 0 20px 20px;
+    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #fbece5; color: #231f20; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      background: #2948b1; color: #fff; width: 320px; padding: 40px 30px 0 30px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 3px 15px rgba(41,72,179,0.06);
     }
-    nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-    nav li { display: inline-block; }
-    nav a { text-decoration: none; color: #372311; font-weight: 700; font-size: 1.11em; }
-    nav a:hover { color: #2948b1; }
-    .hero-bg { background: #f5e4dd; padding: 60px 0 35px 0; text-align: center; }
-    .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #fff; margin-bottom: 16px; object-fit: cover; box-shadow: 0 2px 14px rgba(100,100,120,0.09); }
-    .welcome h1 { font-size: 2.7em; color: #22204e; margin-bottom: 7px; }
-    .welcome { max-width: 770px; margin: 0 auto; padding: 32px 24px; background: #fff8f6; border-radius: 26px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
-    section { max-width: 950px; margin: 45px auto 18px auto; background: #fff; border-radius: 19px; padding: 38px 32px 24px 32px; box-shadow: 0 3px 14px rgba(243,71,31,0.05); }
-    h2 { font-size: 2em; color: #2948b1; margin-top: 0; }
-    .skills-list { display: flex; flex-wrap: wrap; gap: 11px; margin-bottom: 13px; }
-    .skills-list li { background: #e7f3f7; color: #2948b1; border-radius: 7px; padding: 8px 15px; font-weight: 600; min-width: 130px; text-align: center; }
-    .project-gallery { display: flex; flex-wrap: wrap; gap: 17px; margin-top: 10px; }
-    .project-card { background: #fceeee; border-radius: 13px; box-shadow: 0 1px 9px rgba(240,71,103,0.08); padding: 18px 13px; flex: 1 1 325px; min-width: 275px; max-width: 365px; margin-bottom: 18px; }
-    .project-card img { width: 100%; border-radius: 8px; margin-bottom: 11px; box-shadow: 0 1px 4px rgba(240,71,103,0.07); }
-    .project-title { font-weight: bold; color: #bc422a; font-size: 1.15em; margin-bottom: 4px; }
-    .cert-list { display: flex; flex-wrap: wrap; gap: 15px; }
-    .cert-card { background: #eeecec; border-radius: 10px; padding: 10px 17px; min-width: 210px; max-width:260px; margin-bottom: 10px; box-shadow: 0 1px 6px rgba(41,72,177,0.07);}
-    .cert-card strong { display: block; margin-bottom: 6px; color: #3148ad; }
-    .cert-card a { color: #e76d36; font-weight: bold; }
-    .exp-list { padding-left: 16px; }
-    @media (max-width: 900px) {
-      nav { flex-direction: column; gap: 7px; padding: 13px 8px; }
-      section, .welcome { padding:18px 6px 10px 6px; }
-      .project-gallery { flex-direction:column; gap:13px; }
-      .profile-pic { width: 110px; height: 110px; }
-    }
+    .sidebar img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; object-fit: cover; margin-bottom: 15px; }
+    .sidebar h1 { margin-bottom:12px; font-size: 2em; }
+    .sidebar p { margin: 0 0 18px 0; text-align: center; font-size: 1em; }
+    .sidebar .links { margin-top:auto; font-size:1.07em; }
+    .sidebar .links a { color: #bae5ff; text-decoration: underline; display:block; margin:4px 0;}
+    .main { flex: 1; padding: 30px 35px 40px 35px; }
+    @media (max-width:900px){ .layout{ flex-direction:column; } .sidebar{width:100%;padding:27px 8px;}}
+    h2 { font-size:2em; color:#2948b1; margin:38px 0 20px 0; }
+    .skills-list { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 13px; }
+    .skills-list li { background: #e7f3f7; color: #2948b1; border-radius: 6px; padding: 7px 15px; font-weight: 600; min-width: 110px; text-align: center; list-style:none;}
+    .project-gallery { display: flex; flex-wrap: wrap; gap: 17px; }
+    .project-card { background: #fff6f2; border-radius: 13px; box-shadow: 0 1px 9px rgba(240,71,103,0.06); padding: 18px 13px; flex: 1 1 320px; min-width: 245px; max-width: 380px; margin-bottom: 18px; }
+    .project-card img { width: 100%; border-radius: 8px; margin-bottom: 11px; box-shadow: 0 1px 4px rgba(240,71,103,0.08); }
+    .project-title { font-weight: bold; color: #bc422a; font-size: 1.11em; margin-bottom: 4px; }
+    .cert-list { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 12px;}
+    .cert-card { background: #eeecec; border-radius: 9px; padding: 12px 20px; min-width: 210px; max-width:270px; margin-bottom: 10px; box-shadow: 0 1px 6px rgba(41,72,177,0.04);}
+    .cert-card strong { display:block; margin-bottom:8px; color: #3148ad;}
+    .cert-card a { color:#e76d36; font-weight:bold;}
+    .exp-list {padding-left:22px;}
+    .main-section { margin-bottom:45px;}
+    .main-section:last-child { margin-bottom:0;}
+    .contact { padding:15px; border-radius:12px; background:#dff1fc; margin-top:11px;}
+    ul, li { margin-bottom: 8px; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div>
-      <a href="https://github.com/Sahrashfatima" target="_blank">GitHub</a>
-      <span>&nbsp;|&nbsp;</span>
-      <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">LinkedIn</a>
-    </div>
-  </nav>
-
-  <!-- Hero / About -->
-  <div class="hero-bg" id="home">
-    <img class="profile-pic" src="profile.jpg" alt="Profile photo">
-    <div class="welcome">
+  <div class="layout">
+    <!-- Sidebar (Profile) -->
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Profile Photo">
       <h1>Sahrash Fatima</h1>
-      <p>Health Informatics Specialist | Data Analyst <br>
-        I build clinical data analysis pipelines, healthcare dashboards, and digital solutions for better patient outcomes.<br>
-        <strong>Let's build something impactful together!</strong></p>
+      <p>Health Informatics Specialist passionate about data analysis, healthcare technology, and driving better patient outcomes.</p>
+      <div class="links">
+        <a href="mailto:sahrashfatima8@gmail.com">Email Me</a>
+        <a href="https://github.com/Sahrashfatima" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">LinkedIn</a>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <div class="main">
+      <!-- About Section -->
+      <div class="main-section" id="about">
+        <h2>About Me</h2>
+        <p>
+          Experienced Clinical and Healthcare Data Analyst with 4+ years in clinical informatics, dashboard analysis, EHR systems, and research. Skilled in Python, SQL, Power BI, and healthcare data science. Committed to building digital tools for public health and agile care teams.
+        </p>
+      </div>
+      <!-- Skills Section -->
+      <div class="main-section" id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Python (ETL, ML, Automation)</li>
+          <li>SQL (MySQL, PostgreSQL)</li>
+          <li>Power BI, Tableau, Excel</li>
+          <li>OpenEMR, REDCap, OnCore</li>
+          <li>Git, GitHub</li>
+          <li>Pandas, NumPy, SciPy</li>
+          <li>FHIR, HL7, LOINC, ICD-10</li>
+          <li>AWS S3, EC2, Glue</li>
+          <li>REST APIs</li>
+          <li>Logistic Regression, Random Forest</li>
+        </ul>
+        <div style="margin-top:8px;">
+          <b>Extra:</b> Predictive analytics, report automation, healthcare interoperability, clinical data cleaning, dashboard design, and stakeholder training.
+        </div>
+      </div>
+      <!-- Experience Section (from resume) -->
+      <div class="main-section" id="experience">
+        <h2>Experience</h2>
+        <ul class="exp-list">
+          <li>
+            <strong>Business Intelligence Analyst / Data Analyst</strong>, Indiana University Randolph County Caring Community Partnership (May 2024 – Present, USA)
+            <ul>
+              <li>Configured DHIS2 data elements and public health workflows, increasing reporting efficiency by 40%.</li>
+              <li>Designed real-time Power BI dashboards visualizing SDOH KPIs, reducing manual consolidation by 60%.</li>
+              <li>Automated reporting and evaluation dashboards, enhanced health program monitoring across 14 counties.</li>
+              <li>Mentored 25+ interns on dashboard development and data integration, improving project outcomes.</li>
+              <li>Automated ETL workflows for clinical datasets, cut data processing time from 12h to 4h/week.</li>
+              <li>Accelerated patient risk stratification and healthcare insights using advanced SQL and Excel.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Research Analyst</strong>, IU School of Medicine & Riley Children's Hospital (April 2024 – Present, USA)
+            <ul>
+              <li>Deployed predictive models in Python & SQL to improve demand forecasting and pricing accuracy (20% improvement).</li>
+              <li>Cleaned/merged hospital datasets using REDCap & OnCore, reducing processing time by 30% for pediatric studies.</li>
+              <li>Supported IRB documentation, participant tracking, and mixed-methods interview protocols in multi-site research.</li>
+              <li>Established data governance and quality frameworks, meeting compliance standards for 5+ client projects.</li>
+              <li>Collaborated with IT/clinical teams for patient data integration across 5 training sites.</li>
+              <li>Improved reporting reliability via weekly data quality audits and process automation.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Team Scientific Researcher</strong>, Excelra GOSTAR Database (May 2023 – Dec 2023, India)
+            <ul>
+              <li>Curated compound, assay, and SAR data for AI-driven drug discovery and ML/QSAR model development.</li>
+              <li>Structured, validated chemical/biological datasets for integration in GOSTAR and downstream analytics.</li>
+              <li>Supported pharmacology data extraction over 10 therapeutic areas for database usability.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Clinical Pharmacist Compliance Analyst</strong>, Rohini Multi-Specialty Hospital (Aug 2019 – May 2023, India)
+            <ul>
+              <li>Generated weekly medication/outcome reports to guide patient treatment planning.</li>
+              <li>Tracked pharmacovigilance and adverse event documentation for drug safety evaluation.</li>
+              <li>Educated patients on medication adherence and reconciled prescriptions for patient safety.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Projects Section: Each card gets details and an image -->
+      <div class="main-section" id="projects">
+        <h2>Projects</h2>
+        <div class="project-gallery">
+          <div class="project-card">
+            <img src="ETL-1.jpg" alt="FHIR-based ETL Pipeline">
+            <div class="project-title">FHIR-Based ETL Pipeline for Healthcare</div>
+            <p>Built Python pipeline with FHIR APIs for clinical data extraction and loading into EHRs. Enabled robust data interoperability and automated reporting for research. </p>
+            <img src="ETL-2.jpg" alt="ETL Pipeline Diagram">
+          </div>
+          <div class="project-card">
+            <img src="Informatics-project-1.jpg" alt="Power BI Dashboard Project">
+            <div class="project-title">Big Data Visualization Dashboard</div>
+            <p>Designed Power BI/Tableau dashboards for public health outcomes, using cleaned U.S. mortality data and dynamic analytics for high-risk populations.</p>
+            <img src="Bigdatavisualization-1.jpg" alt="PowerBI Chart">
+            <img src="Bigdatavisualization-2.jpg" alt="Tableau Dashboard">
+          </div>
+          <div class="project-card">
+            <img src="Statastic-Project.jpg" alt="Parkinson's ML">
+            <div class="project-title">Parkinson's Disease Diagnosis Model</div>
+            <p>Logistic regression model on clinical/demographic data (AUC: 0.8261), visualized predictors with heatmaps and violin plots for early-stage detection.</p>
+            <img src="Graph.jpg" alt="Correlation Heatmap Graph">
+            <img src="Statastic-project-2.jpg" alt="Bar Charts">
+          </div>
+          <div class="project-card">
+            <img src="Decision-Tree.jpg" alt="Diabetes Decision Tree">
+            <div class="project-title">Diabetes Routine Testing Decision Flow</div>
+            <p>Mapped screening pathways and built flows for diabetes risk prediction using multidimensional clinical features and health records.</p>
+            <img src="KNOWLEDGE-GRAPH-Routine-Testing-for-Diabetes-Type-2.jpg" alt="Knowledge Graph">
+          </div>
+          <div class="project-card">
+            <img src="Project-management-3.jpg" alt="Project Management WBS">
+            <div class="project-title">EpiTech Epilepsy Device Project Planning</div>
+            <p>Coordinated multi-phase project for epilepsy device. Led requirement gathering, milestone tracking, Gantt planning, and risk assessment.</p>
+            <img src="Project-management-1.jpg" alt="Project Management Gantt">
+            <img src="Project-management-2.jpg" alt="Gantt Excel">
+            <img src="Project-management-4.jpg" alt="Milestones Mindmap">
+          </div>
+          <div class="project-card">
+            <img src="Informatics-4.jpg" alt="Clinical Decision Support">
+            <div class="project-title">OpenEMR Clinical Decision Support</div>
+            <p>Implemented evidence-based clinical rules, integrated triggers/alerts into OpenEMR to enhance behavioral screening and diagnostic workflows.</p>
+          </div>
+          <!-- Example w/o image -->
+          <div class="project-card">
+            <div class="project-title">Custom Statistical Analysis Project</div>
+            <p>Developed and analyzed data models for CKD patient outcomes using regression, boosting, dashboard reporting, and model comparison. (No public images)</p>
+          </div>
+        </div>
+      </div>
+      <!-- Certifications Section -->
+      <div class="main-section" id="certifications">
+        <h2>Certifications</h2>
+        <div class="cert-list">
+          <div class="cert-card">
+            <strong>Good Clinical Practice (GCP)</strong>
+            <a href="Good-Clinical-Practice-GCP.pdf" target="_blank">View Certificate PDF</a>
+          </div>
+          <div class="cert-card">
+            <strong>Social Behavioral Researchers</strong>
+            <a href="Social-Behavioral-Researchers.pdf" target="_blank">View Certificate PDF</a>
+          </div>
+          <div class="cert-card">
+            <strong>Data Visualisation</strong>
+            <a href="Data-Visualisation.pdf" target="_blank">View Certificate PDF</a>
+          </div>
+          <div class="cert-card">
+            <strong>Biomedical Researcher</strong>
+            <a href="Biomedical-Researcher.pdf" target="_blank">View Certificate PDF</a>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Section -->
+      <div class="main-section contact" id="contact">
+        <h2>Contact</h2>
+        <div>Email: <a href="mailto:sahrashfatima8@gmail.com">sahrashfatima8@gmail.com</a></div>
+        <div>GitHub: <a href="https://github.com/Sahrashfatima" target="_blank">Sahrashfatima</a></div>
+        <div>LinkedIn: <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">linkedin.com/in/sahrash-fatima</a></div>
+      </div>
     </div>
   </div>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python (data science, ETL, ML)</li>
-      <li>SQL (MySQL, PostgreSQL)</li>
-      <li>Power BI, Tableau, Advanced Excel</li>
-      <li>OpenEMR, Data Collection (REDCap, OnCore)</li>
-      <li>Git, GitHub</li>
-      <li>FHIR, HL7, LOINC, ICD-10, SNOMED CT</li>
-      <li>Pandas, NumPy, SciPy</li>
-      <li>Cloud: AWS S3, EC2, Glue</li>
-      <li>APIs (REST, FHIR)</li>
-      <li>Statistics & ML (Logistic Regression, Random Forest, Gradient Boost)</li>
-      <li>Stakeholder Communication</li>
-      <li>Clinical Terminology Integration</li>
-    </ul>
-    <div>Experienced in clinical research management, automation, interoperability, predictive analytics, and building scalable, secure data workflows in healthcare.</div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul class="exp-list">
-      <li><strong>Business Intelligence Analyst/Data Analyst</strong>, Indiana University (2024–Present): Automated DHIS2 workflows, built Power BI dashboards, reduced manual data entry, and led intern training.</li>
-      <li><strong>Research Analyst</strong>, IU School of Medicine/Riley Children's Hospital (2024–Present): Built predictive models, reduced clinical data processing time, and supported participant tracking.</li>
-      <li><strong>Team Scientific Researcher</strong>, Excelra, GOSTAR Database (2023): Curated/validated data for AI-driven drug discovery pipelines.</li>
-      <li><strong>Clinical Pharmacist Compliance Analyst</strong>, Rohini Multi-Specialty Hospital (2019–2023): Reported on medication safety, supported patient education, and ensured compliance.</li>
-    </ul>
-  </section>
-
-  <!-- Projects Section: Each card gets details and an image -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-gallery">
-      <div class="project-card">
-        <img src="ETL-1.jpg" alt="FHIR-based ETL Pipeline">
-        <div class="project-title">FHIR-Based ETL Pipeline</div>
-        <p>Built a secure pipeline using Python & FHIR APIs for EHR data extraction, transformation, and loading—enabled robust interoperability and automated reporting for clinical studies.</p>
-        <img src="ETL-2.jpg" alt="ETL Pipeline Diagram">
-      </div>
-      <div class="project-card">
-        <img src="Informatics-project-1.jpg" alt="Power BI Dashboard Project">
-        <div class="project-title">Big Data Visualization Dashboard</div>
-        <p>Designed interactive Power BI/Tableau dashboards for public health outcomes using cleaned U.S. mortality data, enabling dynamic analytics of high-risk populations.</p>
-        <img src="Bigdatavisualization-1.jpg" alt="Power BI Chart">
-        <img src="Bigdatavisualization-2.jpg" alt="Tableau Dashboard">
-      </div>
-      <div class="project-card">
-        <img src="Statastic-Project.jpg" alt="Parkinson's Diagnosis ML Model">
-        <div class="project-title">Parkinson's Disease Diagnosis Model</div>
-        <p>Developed a logistic regression model with clinical and demographic data (AUC: 0.8261), using heatmaps and violin plots for predictor analysis, early-stage detection.</p>
-        <img src="Graph.jpg" alt="Correlation Heatmap Graph">
-        <img src="Statastic-project-2.jpg" alt="Bar Charts">
-      </div>
-      <div class="project-card">
-        <img src="Decision-Tree.jpg" alt="Diabetes Screening Decision Tree">
-        <div class="project-title">Diabetes Routine Testing Decision Flow</div>
-        <p>Mapped screening pathways and built automated flows for diabetes risk prediction using multidimensional clinical features and health records.</p>
-        <img src="KNOWLEDGE-GRAPH-Routine-Testing-for-Diabetes-Type-2.jpg" alt="Knowledge Graph">
-      </div>
-      <div class="project-card">
-        <img src="Project-management-3.jpg" alt="Project Management WBS">
-        <div class="project-title">Project Planning for EpiTech</div>
-        <p>Coordinated multi-phase project to develop an epilepsy medical device. Led requirement gathering, milestone tracking, and resource planning with Gantt charts and risk assessment.</p>
-        <img src="Project-management-1.jpg" alt="Project Management Gantt">
-        <img src="Project-management-2.jpg" alt="Gantt chart Excel">
-        <img src="Project-management-4.jpg" alt="Milestones Mindmap">
-      </div>
-      <div class="project-card">
-        <img src="Informatics-4.jpg" alt="Clinical Decision Support">
-        <div class="project-title">OpenEMR Clinical Decision Support</div>
-        <p>Implemented evidence-based clinical rules in OpenEMR, integrated triggers and alerts to improve behavioral screening and diagnostic protocols for care teams.</p>
-      </div>
-    </div>
-    <div style="margin-top:10px; color:#7e7152; font-size:1em;">(You can click each project card to add more details or files.)</div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="cert-list">
-      <div class="cert-card">
-        <strong>Good Clinical Practice (GCP)</strong>
-        <a href="Good-Clinical-Practice-GCP.pdf" target="_blank">View Certificate PDF</a>
-      </div>
-      <div class="cert-card">
-        <strong>Social Behavioral Researchers</strong>
-        <a href="Social-Behavioral-Researchers.pdf" target="_blank">View Certificate PDF</a>
-      </div>
-      <div class="cert-card">
-        <strong>Data Visualisation</strong>
-        <a href="Data-Visualisation.pdf" target="_blank">View Certificate PDF</a>
-      </div>
-      <div class="cert-card">
-        <strong>Biomedical Researcher</strong>
-        <a href="Biomedical-Researcher.pdf" target="_blank">View Certificate PDF</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div>Email: sahrashfatima8@gmail.com</div>
-    <div>GitHub: <a href="https://github.com/Sahrashfatima" target="_blank">Sahrashfatima</a></div>
-    <div>LinkedIn: <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">linkedin.com/in/sahrash-fatima</a></div>
-  </section>
 </body>
 </html>
