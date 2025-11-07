@@ -161,51 +161,73 @@
     </ul>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card" onclick="openProject('FHIR-Based ETL Pipeline','Built Python pipeline with FHIR APIs for clinical data extraction and EHR integration.',['ETL 1.png','ETL 2.png','BPMN.png'])">
-        <div class="card-title">FHIR-Based ETL Pipeline</div>
-        <img src="ETL 1.png" alt="FHIR ETL Pipeline">
-      </div>
-      <div class="card" onclick="openProject('Big Data Visualization Dashboard','Power BI/Tableau dashboards for public health analytics.',['Bigdatavisualization1.png','Bigdatavisualization2.png','Informatics project 1.png'])">
-        <div class="card-title">Big Data Visualization</div>
-        <img src="Bigdatavisualization1.png" alt="Big Data Viz">
-      </div>
-      <div class="card" onclick="openProject('Parkinson\'s Diagnosis Model','Logistic regression on clinical/demographic data with violin plots, heatmaps.',['Statastic Project.png','Statastic project 2.png','Graph.png'])">
-        <div class="card-title">Parkinson's Diagnosis Model</div>
-        <img src="Statastic Project.png" alt="Parkinson Model">
-      </div>
-      <div class="card" onclick="openProject('Diabetes Decision Tree','Decision tree and knowledge graph for diabetes risk screening.',['Decision Tree.png','KNOWLEDGE GRAPH – Routine Testing for ....png'])">
-        <div class="card-title">Diabetes Decision Flow</div>
-        <img src="Decision Tree.png" alt="Diabetes Decision">
-      </div>
-      <div class="card" onclick="openProject('Project Management Planning','Epilepsy device planning: requirements, milestones, risk assessment.',['Project management 1.png','Project management 2.png','Project management 3.png','Project management 4.png'])">
-        <div class="card-title">Project Management Planning</div>
-        <img src="Project management 1.png" alt="Project Management">
-      </div>
+ <!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card" onclick="openProject('FHIR-Based ETL Pipeline','Automated clinical EHR extraction and data integration using FHIR APIs and Python.',['ETL-1.jpg','ETL-2.jpg','BPMN.jpg'])">
+      <div class="card-title">FHIR-Based ETL Pipeline</div>
+      <div>Automated clinical EHR extraction and data integration using FHIR APIs and Python.</div>
     </div>
-  </section>
+    <div class="card" onclick="openProject('Big Data Visualization Dashboard','Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.',['Bigdatavisualization-1.jpg','Bigdatavisualization-2.jpg','Informatics-project-1.jpg'])">
+      <div class="card-title">Big Data Visualization</div>
+      <div>Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.</div>
+    </div>
+    <div class="card" onclick="openProject('Parkinson\'s Diagnosis Model','Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.',['Statastic-Project.jpg','Statastic-project-2.jpg','Graph.jpg'])">
+      <div class="card-title">Parkinson's Diagnosis Model</div>
+      <div>Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.</div>
+    </div>
+    <div class="card" onclick="openProject('Diabetes Decision Tree','Knowledge graph and decision tree for automated diabetes risk screening.',['Decision-Tree.jpg','KNOWLEDGE-GRAPH-Routine-Testing-for-Diabetes-Type-2.jpg'])">
+      <div class="card-title">Diabetes Decision Tree</div>
+      <div>Knowledge graph and decision tree for automated diabetes risk screening.</div>
+    </div>
+    <div class="card" onclick="openProject('Project Management Planning','Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.',['Project-management-1.jpg','Project-management-2.jpg','Project-management-3.jpg','Project-management-4.jpg'])">
+      <div class="card-title">Project Management Planning</div>
+      <div>Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Certificates Section -->
-  <section id="certifications">
-    <h2>Certificates</h2>
-    <div class="cert-list">
-      <div class="cert-card" onclick="openCert('Good Clinical Practice (GCP)', 'Good Clinical Practice (GCP).pdf')">
-        <strong>Good Clinical Practice (GCP)</strong><span>Click to view</span>
-      </div>
-      <div class="cert-card" onclick="openCert('Social-Behavioral Researchers', 'Social-Behavioral Researchers.pdf')">
-        <strong>Social-Behavioral Researchers</strong><span>Click to view</span>
-      </div>
-      <div class="cert-card" onclick="openCert('Data Visualisation', 'Data Visualisation.pdf')">
-        <strong>Data Visualisation</strong><span>Click to view</span>
-      </div>
-      <div class="cert-card" onclick="openCert('Biomedical Researcher', 'Biomedical Researcher.pdf')">
-        <strong>Biomedical Researcher</strong><span>Click to view</span>
-      </div>
+<!-- Certificates Section -->
+<section id="certifications">
+  <h2>Certificates</h2>
+  <div class="cert-list">
+    <div class="cert-card" onclick="openCert('Good Clinical Practice (GCP)', 'Good-Clinical-Practice-GCP.pdf')">
+      <strong>Good Clinical Practice (GCP)</strong><span>Click to view</span>
     </div>
-  </section>
+    <div class="cert-card" onclick="openCert('Social-Behavioral Researchers', 'Social-Behavioral-Researchers.pdf')">
+      <strong>Social-Behavioral Researchers</strong><span>Click to view</span>
+    </div>
+    <div class="cert-card" onclick="openCert('Data Visualisation', 'Data-Visualisation.pdf')">
+      <strong>Data Visualisation</strong><span>Click to view</span>
+    </div>
+    <div class="cert-card" onclick="openCert('Biomedical Researcher', 'Biomedical-Researcher.pdf')">
+      <strong>Biomedical Researcher</strong><span>Click to view</span>
+    </div>
+  </div>
+</section>
+
+<script>
+function openProject(title, description, images) {
+  let html = `<h3>${title}</h3><div>${description}</div>`;
+  if(images && images.length) {
+    html += '<div class="modal-images">';
+    images.forEach(img => { html += `<img src="${img}" alt="Project Image" style="max-width:120px;max-height:97px;">`; });
+    html += '</div>';
+  }
+  document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
+  document.getElementById('modal-bg').style.display = 'block';
+}
+function openCert(title, pdfFile) {
+  let html = `<h3>${title}</h3>
+    <iframe class="cert-preview" src="${pdfFile}" frameborder="0"></iframe>
+    <a class="cert-link" href="${pdfFile}" target="_blank">Download PDF</a>`;
+  document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
+  document.getElementById('modal-bg').style.display = 'block';
+}
+function closeModal() { document.getElementById('modal-bg').style.display = 'none'; }
+document.getElementById('modal-bg').addEventListener('click', function(e) { if(e.target === this) closeModal(); });
+</script>
 
   <!-- Contact Section -->
   <section id="contact">
