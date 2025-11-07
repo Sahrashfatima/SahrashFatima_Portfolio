@@ -17,6 +17,7 @@
     .welcome .desc { font-size: 1.18em; margin-bottom: 7px;}
     section { max-width: 940px; margin: 38px auto 0 auto; background: #fff5eb; border-radius: 18px; padding: 36px 40px 30px 40px; }
     h2 { font-size:2em; margin-top:-2px; margin-bottom:14px; color:#a88458;}
+    .subhead { color:#b49f85; font-size:1.18em; margin:0 0 25px 0;}
     .skills-list { display: flex; flex-wrap: wrap; gap: 11px; margin-bottom: 14px; }
     .skills-list li { background: #f7eedd; color: #a88458; border-radius: 8px; padding: 8px 18px; font-weight: bold; font-size: 1.09em; min-width: 110px; text-align: center; list-style:none; border:1px solid #e8d3b6;}
     .cards { display: flex; flex-wrap: wrap; gap: 21px; }
@@ -25,7 +26,11 @@
     .card-title { font-weight: bold; color: #8a6333; font-size: 1.18em; margin-bottom: 4px; }
     .card img { width: 100%; border-radius: 8px; margin-bottom: 7px; }
     .exp-list { padding-left: 12px; }
-    .exp-list li { margin-bottom: 18px; }
+    .exp-list li { margin-bottom: 24px; }
+    .exp-list ul { margin-top: 8px; }
+    .exp-list li strong { color:#81562b }
+    .edu-list { margin: 0; padding-left:22px;}
+    .edu-list li { margin-bottom: 16px;}
     .cert-list { display: flex; flex-wrap: wrap; gap: 21px; }
     .cert-card { background: #fff; border-radius: 12px; box-shadow: 0 1px 12px rgba(170,130,80,0.10); padding: 14px 12px; min-width: 170px; max-width: 210px; text-align: center; cursor: pointer; font-size: 1.09em;}
     .cert-card strong { color:#a88458; margin-bottom:7px; display:block;}
@@ -48,6 +53,7 @@
     <ul>
       <li><a href="#about">Home</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certificates</a></li>
@@ -67,6 +73,9 @@
         Health Informatics Specialist passionate about data analysis, healthcare technology, and better patient outcomes.<br>
         Experienced in Python, SQL, Power BI, clinical informatics, dashboard analysis, and research.<br>
         <strong>Let's create something impactful together!</strong>
+      </div>
+      <div class="subhead">
+        <strong>Brief Experience:</strong> 4+ years in clinical informatics, digital health, and automated data reporting. Passionate about building public health solutions with modern tech and analytics.
       </div>
       <a href="SahrashF.Resume.pdf" target="_blank" style="background:#a88458;color:#fff;padding:8px 19px;text-decoration:none;font-weight:bold;border-radius:10px;margin-top:13px;display:inline-block;">📄 View Resume</a>
     </div>
@@ -88,50 +97,69 @@
       <li>Logistic Regression, Random Forest</li>
     </ul>
     <div>
-      Clinical research management, predictive analytics, dashboard design, stakeholder training.
+      Clinical research management, predictive analytics, dashboard design.
     </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li>
+        <strong>Master of Science in Health Informatics</strong><br>
+        Indiana University Indianapolis, USA <br>
+        GPA: 3.8/4 | Year: 2024 (Expected)
+      </li>
+      <li>
+        <strong>Doctor of Pharmacy</strong><br>
+        Kakatiya University, India <br>
+        GPA: 9.1/10 | 2019
+      </li>
+    </ul>
   </section>
 
   <!-- Experience Section -->
   <section id="experience">
     <h2>Work Experience</h2>
     <ul class="exp-list">
-      <li><strong>Business Intelligence Analyst / Data Analyst</strong><br>
-        Indiana University Randolph County Caring Community Partnership (May 2024 – Present)
+      <li>
+        <strong>Business Intelligence Analyst / Data Analyst</strong>
+        <br>Indiana University Randolph County Caring Community Partnership (May 2024 – Present)
         <ul>
-          <li>Configured DHIS2 data elements and public health workflows, increasing reporting efficiency by 40%.</li>
-          <li>Designed real-time Power BI dashboards visualizing SDOH KPIs, reducing manual consolidation by 60%.</li>
-          <li>Automated reporting and evaluation dashboards, enhanced health program monitoring across 14 counties.</li>
-          <li>Mentored 25+ interns on dashboard development and data integration, improving project outcomes.</li>
-          <li>Automated ETL workflows for clinical datasets, cut data processing time from 12h to 4h/week.</li>
-          <li>Accelerated patient risk stratification and healthcare insights using advanced SQL and Excel.</li>
+          <li>Configured DHIS2 data elements, public health reporting, and analytic workflows, boosting reporting efficiency by 40%.</li>
+          <li>Designed Power BI dashboards for SDOH & healthcare KPIs, reducing manual consolidation by 60%.</li>
+          <li>Automated reporting pipelines and program monitoring dashboards for public health initiatives across 14 counties.</li>
+          <li>Mentored 25+ interns in dashboard projects, ETL automation, and data governance best practices.</li>
+          <li>Automated ETL and data cleaning for clinical datasets; cut routine data processing from 12h to 4h/week.</li>
+          <li>Worked with cross-domain teams to integrate clinical/administrative data and deliver outcomes to state programs.</li>
         </ul>
       </li>
-      <li><strong>Research Analyst</strong><br>
-        IU School of Medicine & Riley Children's Hospital (Apr 2024 – Present)
+      <li>
+        <strong>Research Analyst</strong>
+        <br>IU School of Medicine & Riley Children's Hospital (Apr 2024 – Present)
         <ul>
-          <li>Deployed predictive models in Python & SQL to improve demand forecasting and pricing accuracy (20% improvement).</li>
-          <li>Cleaned/merged hospital datasets using REDCap & OnCore, reducing processing time by 30% for pediatric studies.</li>
-          <li>Supported IRB documentation, participant tracking, and mixed-methods interview protocols in multi-site research.</li>
-          <li>Established data governance and quality frameworks, meeting compliance standards for 5+ client projects.</li>
-          <li>Collaborated with IT/clinical teams for patient data integration across 5 training sites.</li>
-          <li>Improved reporting reliability via weekly data quality audits and process automation.</li>
+          <li>Developed predictive models in Python & SQL to support demand forecasting and clinical workflow optimization (improved pricing accuracy by 20%).</li>
+          <li>Cleaned and merged hospital and study datasets using REDCap/OnCore, reducing reporting and data prep time by 30%.</li>
+          <li>Supported IRB documentation, tracked research participant compliance, and led mixed-methods data collection in multi-site studies.</li>
+          <li>Built database queries and weekly audit tools to ensure research compliance and data quality.</li>
+          <li>Partnered with clinical & IT teams for secure patient data flows and robust study monitoring.</li>
         </ul>
       </li>
-      <li><strong>Team Scientific Researcher</strong><br>
-        Excelra GOSTAR Database (May 2023 – Dec 2023)
+      <li>
+        <strong>Team Scientific Researcher</strong><br>Excelra GOSTAR Database (May 2023 – Dec 2023)
         <ul>
-          <li>Curated compound, assay, and SAR data for AI-driven drug discovery and ML/QSAR model development.</li>
-          <li>Structured, validated chemical/biological datasets for integration in GOSTAR and downstream analytics.</li>
-          <li>Supported pharmacology data extraction over 10 therapeutic areas for database usability.</li>
+          <li>Curated SAR, compound, and assay data for ML/AI-based drug discovery and pharmacological analytics.</li>
+          <li>Validated large chemical and biological data sets for integration into GOSTAR, enabling downstream analytics.</li>
+          <li>Coordinated cross-checks on 10+ therapeutic areas to improve database reliability for pharma projects.</li>
         </ul>
       </li>
-      <li><strong>Clinical Pharmacist Compliance Analyst</strong><br>
-        Rohini Multi-Specialty Hospital (Aug 2019 – May 2023)
+      <li>
+        <strong>Clinical Pharmacist Compliance Analyst</strong>
+        <br>Rohini Multi-Specialty Hospital (Aug 2019 – May 2023)
         <ul>
-          <li>Generated weekly medication/outcome reports to guide patient treatment planning.</li>
-          <li>Tracked pharmacovigilance and adverse event documentation for drug safety evaluation.</li>
-          <li>Educated patients on medication adherence and reconciled prescriptions for patient safety.</li>
+          <li>Prepared and analyzed weekly reports on medication safety, clinical outcomes, and protocol compliance for inpatient and outpatient clinics.</li>
+          <li>Monitored adverse events, tracked audit logs, trained new clinical staff in pharmacovigilance workflows.</li>
+          <li>Managed patient counseling and reconciliation, boosting patient adherence and reducing drug interaction risk.</li>
         </ul>
       </li>
     </ul>
@@ -196,7 +224,6 @@
   <div id="modal-bg" class="modal-bg">
     <div class="modal" id="modal-content">
       <span class="close-btn" onclick="closeModal()">&times;</span>
-      <!-- JS content -->
     </div>
   </div>
   <script>
@@ -222,4 +249,5 @@
   </script>
 </body>
 </html>
+
 
