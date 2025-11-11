@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sahrash Fatima Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body { background: #f7eedd; color: #342214; margin: 0; font-family: 'Segoe UI', Arial, sans-serif; }
     .nav { background: #a88458; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; height: 60px; }
@@ -36,15 +36,24 @@
     .cert-card strong { color:#a88458; margin-bottom:7px; display:block;}
     .cert-card:hover { background: #f7eedd; }
     .contact { background: #e8d3b6; padding: 16px; border-radius: 14px; margin: 13px 0 0 0;}
-    .modal-bg {position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(80,50,30,0.41); z-index:99;display:none;}
-    .modal { background: #fff5eb; border-radius: 18px; max-width: 540px; width:94%; margin:80px auto; padding:32px 24px; box-shadow: 0 8px 32px #96724d7a; position:relative;}
+
+    /* Modal / Lightbox */
+    .modal-bg {position: fixed; inset:0; background: rgba(80,50,30,0.41); z-index: 9999; display:none;}
+    .modal { background: #fff5eb; border-radius: 18px; max-width: 900px; width:94%; margin:80px auto; padding:32px 24px; box-shadow: 0 8px 32px #96724d7a; position:relative;}
     .modal h3 { margin-top:0; color:#a88458;}
-    .modal .close-btn { position:absolute;top:12px;right:20px;font-size:1.2em;cursor:pointer;color:#a88458;font-weight:bold;}
+    .modal .close-btn { position:absolute;top:12px;right:20px;font-size:1.6em;cursor:pointer;color:#a88458;font-weight:bold; line-height:1; }
+    .modal .cert-preview {width:100%;height:350px;border-radius:8px;border:1px solid #b8aa94;}
+    .modal .cert-link { display:block;margin-top:13px;background:#a88458;color:#fff;text-align:center;border-radius:8px;padding:9px;text-decoration:none;font-weight:bold;}
+
     .modal-images { display:flex; flex-wrap:wrap; gap:12px; margin-top:9px;}
     .modal-images img { width:110px; border-radius:7px; box-shadow:0 1px 4px #a8845887;}
-    .modal .cert-preview {width:100%;height:350px;border-radius:8px;border:1px solid #b8aa94;}
-    .modal .cert-link { display:block;margin-top:13px;background:#a88458;color:#fff;text-align:center;border-radius:8px;padding:7px;text-decoration:none;font-weight:bold;}
-    @media (max-width:900px){ .nav{padding:0 13px;}section,.header-bg,.welcome{padding:10px;} .cards{flex-direction:column;}.modal{margin:18px auto;} }
+
+    @media (max-width:900px){
+      .nav{padding:0 13px;}
+      section,.header-bg,.welcome{padding:10px;}
+      .cards{flex-direction:column;}
+      .modal{margin:18px auto;}
+    }
   </style>
 </head>
 <body>
@@ -60,55 +69,56 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div>
-      <a href="https://github.com/Sahrashfatima" target="_blank">GitHub</a> | 
-      <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Sahrashfatima" target="_blank" rel="noopener">GitHub</a> | 
+      <a href="https://linkedin.com/in/sahrash-fatima" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </nav>
+
   <!-- Header -->
   <div class="header-bg" id="about">
-    <img class="profile-pic" src="profile.jpg" alt="Profile Photo">
+    <img class="profile-pic" src="profile.jpg" alt="Profile Photo" loading="lazy" />
     <div class="welcome">
       <h1>Sahrash Fatima</h1>
       <div class="desc">
-        Health Informatics Specialist passionate about data analysis, healthcare technology, and better patient outcomes.<br>
-        Experienced in Python, SQL, Power BI, clinical documentation, dashboard analysis, and research.<br>
+        Health Informatics Specialist passionate about data analysis, healthcare technology, and better patient outcomes.<br/>
+        Experienced in Python, SQL, Power BI, clinical documentation, dashboard analysis, and research.<br/>
         <strong>Let's create something impactful together!</strong>
       </div>
-      
-      <a href="SahrashF.Resume.pdf" target="_blank" style="background:#a88458;color:#fff;padding:8px 19px;text-decoration:none;font-weight:bold;border-radius:10px;margin-top:13px;display:inline-block;">📄 View Resume</a>
+      <a href="SahrashF.Resume.pdf" target="_blank" rel="noopener" style="background:#a88458;color:#fff;padding:8px 19px;text-decoration:none;font-weight:bold;border-radius:10px;margin-top:13px;display:inline-block;">📄 View Resume</a>
     </div>
   </div>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul class="skills-list">
-    <li><b>Clinical Research Operations:</b> Protocol management, IRB submissions, safety reporting, REDCap</li>
-    <li><b>Electronic Health Records:</b> OpenEMR, Epic EHR, Cerner, Allscripts</li>
-    <li><b>Regulatory/Standards:</b> ICH-GCP, FDA regulations, HL7, ICD-10, HIPAA</li>
-    <li><b>Data Analysis & Visualization:</b> Python, R, SPSS, Power BI, Tableau, Excel (Pivot Tables, Macros), SQL, MySQL, PostgreSQL</li>
-    <li><b>Project Coordination:</b> Site management, protocol adherence, budget administration, cross-functional communication</li>
-    <li><b>Billing & Compliance:</b> Data validation, quality control, documentation, regulatory compliance</li>
-    <li><b>Programming & Scripting:</b> Python, SQL, R, JSON</li>
-    <li><b>Version Control & ETL Tools:</b> Git, GitHub, ETL Automation, OpenEMR FHIR API</li>
-    <li><b>Cloud/Collaboration:</b> AWS, SharePoint, Teams, REDCap Cloud</li>
-  </ul>
-  <div>
-    Experienced in clinical research, data analysis, EHR management, healthcare billing, and regulatory compliance.
-  </div>
-</section>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><b>Clinical Research Operations:</b> Protocol management, IRB submissions, safety reporting, REDCap</li>
+      <li><b>Electronic Health Records:</b> OpenEMR, Epic EHR, Cerner, Allscripts</li>
+      <li><b>Regulatory/Standards:</b> ICH-GCP, FDA regulations, HL7, ICD-10, HIPAA</li>
+      <li><b>Data Analysis & Visualization:</b> Python, R, SPSS, Power BI, Tableau, Excel, SQL, MySQL, PostgreSQL</li>
+      <li><b>Project Coordination:</b> Site management, protocol adherence, budget administration, cross-functional communication</li>
+      <li><b>Billing & Compliance:</b> Data validation, quality control, documentation, regulatory compliance</li>
+      <li><b>Programming & Scripting:</b> Python, SQL, R, JSON</li>
+      <li><b>Version Control & ETL Tools:</b> Git, GitHub, ETL Automation, OpenEMR FHIR API</li>
+      <li><b>Cloud/Collaboration:</b> AWS, SharePoint, Teams, REDCap Cloud</li>
+    </ul>
+    <div>
+      Experienced in clinical research, data analysis, EHR management, healthcare billing, and regulatory compliance.
+    </div>
+  </section>
 
   <!-- Education Section -->
   <section id="education">
     <h2>Education</h2>
     <ul class="edu-list">
       <li>
-        <strong>Master of Science in Health Informatics</strong><br>
-        Indiana University Indianapolis, USA <br>
+        <strong>Master of Science in Health Informatics</strong><br/>
+        Indiana University Indianapolis, USA <br/>
         GPA: 3.8/4 | Year: 2025
       </li>
       <li>
-        <strong>Doctor of Pharmacy</strong><br>
-        Kakatiya University, India <br>
+        <strong>Doctor of Pharmacy</strong><br/>
+        Kakatiya University, India <br/>
         GPA: 9.7/10 | 2020
       </li>
     </ul>
@@ -119,8 +129,8 @@
     <h2>Work Experience</h2>
     <ul class="exp-list">
       <li>
-        <strong>Business Intelligence Analyst / Data Analyst</strong>
-        <br>Indiana University Randolph County Caring Community Partnership (May 2024 – Present)
+        <strong>Business Intelligence Analyst / Data Analyst</strong><br/>
+        Indiana University Randolph County Caring Community Partnership (May 2024 – Present)
         <ul>
           <li>Configured DHIS2 data elements, public health reporting, and analytic workflows, boosting reporting efficiency by 40%.</li>
           <li>Designed Power BI dashboards for SDOH & healthcare KPIs, reducing manual consolidation by 60%.</li>
@@ -131,8 +141,8 @@
         </ul>
       </li>
       <li>
-        <strong>Research Analyst</strong>
-        <br>IU School of Medicine & Riley Children's Hospital (Apr 2024 – Present)
+        <strong>Research Analyst</strong><br/>
+        IU School of Medicine & Riley Children's Hospital (Apr 2024 – Present)
         <ul>
           <li>Developed predictive models in Python & SQL to support demand forecasting and clinical workflow optimization (improved pricing accuracy by 20%).</li>
           <li>Cleaned and merged hospital and study datasets using REDCap/OnCore, reducing reporting and data prep time by 30%.</li>
@@ -142,7 +152,7 @@
         </ul>
       </li>
       <li>
-        <strong>Team Scientific Researcher</strong><br>Excelra GOSTAR Database (May 2023 – Dec 2023)
+        <strong>Team Scientific Researcher</strong><br/>Excelra GOSTAR Database (May 2023 – Dec 2023)
         <ul>
           <li>Curated SAR, compound, and assay data for ML/AI-based drug discovery and pharmacological analytics.</li>
           <li>Validated large chemical and biological data sets for integration into GOSTAR, enabling downstream analytics.</li>
@@ -150,8 +160,8 @@
         </ul>
       </li>
       <li>
-        <strong>Clinical Pharmacist Compliance Analyst</strong>
-        <br>Rohini Multi-Specialty Hospital (Aug 2019 – May 2023)
+        <strong>Clinical Pharmacist Compliance Analyst</strong><br/>
+        Rohini Multi-Specialty Hospital (Aug 2019 – May 2023)
         <ul>
           <li>Prepared and analyzed weekly reports on medication safety, clinical outcomes, and protocol compliance for inpatient and outpatient clinics.</li>
           <li>Monitored adverse events, tracked audit logs, trained new clinical staff in pharmacovigilance workflows.</li>
@@ -161,108 +171,177 @@
     </ul>
   </section>
 
- <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="cards">
-    <div class="card" onclick="openProject('FHIR-Based ETL Pipeline','Automated clinical EHR extraction and data integration using FHIR APIs and Python.',['ETL 1.png','ETL 2.png','BPMN.png'])">
-      <div class="card-title">FHIR-Based ETL Pipeline</div>
-      <div>Automated clinical EHR extraction and data integration using FHIR APIs and Python.</div>
-    </div>
-    <div class="card" onclick="openProject('Big Data Visualization Dashboard','Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.',['Bigdatavisualization 1.png','Bigdatavisualization 2.png'])">
-      <div class="card-title">Big Data Visualization</div>
-      <div>Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.</div>
-    </div>
-    <div class="card" onclick="openProject('Parkinson\'s Diagnosis Model','Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.',['Statastic Project.png','Statastic project 2.png'])">
-      <div class="card-title">Parkinson's Diagnosis Model</div>
-      <div>Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.</div>
-    
-    </div>
-    <div class="card" onclick="openProject('Project Management Planning','Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.',['Project management 1.png','Project management 2.png','Project management 3.png','Project management 4.png'])">
-      <div class="card-title">Project Management Planning</div>
-      <div>Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.</div>
-    </div>
-  </div>
-</section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card" onclick="openProject('FHIR-Based ETL Pipeline','Automated clinical EHR extraction and data integration using FHIR APIs and Python.', ['ETL-1.png','ETL-2.png','BPMN.png'])">
+        <div class="card-title">FHIR-Based ETL Pipeline</div>
+        <div>Automated clinical EHR extraction and data integration using FHIR APIs and Python.</div>
+      </div>
 
-<!-- Certificates Section -->
-<section id="certifications">
-  <h2>Certificates</h2>
-  <div class="cert-list">
-    <div class="cert-card" onclick="openCert('Good Clinical Practice (GCP)', 'Good Clinical Practice (GCP).pdf')">
-      <strong>Good Clinical Practice (GCP)</strong><span>Click to view</span>
-    </div>
-    <div class="cert-card" onclick="openCert('Social-Behavioral Researchers', 'Social:Behavioral Researchers.pdf')">
-      <strong>Social-Behavioral Researchers</strong><span>Click to view</span>
-    </div>
-    <div class="cert-card" onclick="openCert('Data Visualisation', 'Data Visualisation.pdf')">
-      <strong>Data Visualisation</strong><span>Click to view</span>
-    </div>
-    <div class="cert-card" onclick="openCert('Biomedical Researcher', 'Biomedical Researcher.pdf')">
-      <strong>Biomedical Researcher</strong><span>Click to view</span>
-    </div>
-  </div>
-</section>
+      <div class="card" onclick="openProject('Big Data Visualization Dashboard','Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.', ['Bigdatavisualization-1.png','Bigdatavisualization-2.png'])">
+        <div class="card-title">Big Data Visualization</div>
+        <div>Public health dashboard with dynamic analytics using Power BI, Tableau, Excel.</div>
+      </div>
 
-<script>
-function openProject(title, description, images) {
-  let html = `<h3>${title}</h3><div>${description}</div>`;
-  if(images && images.length) {
-    html += '<div class="modal-images">';
-    images.forEach(img => { html += `<img src="${img}" alt="Project Image" style="max-width:120px;max-height:97px;">`; });
-    html += '</div>';
-  }
-  document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
-  document.getElementById('modal-bg').style.display = 'block';
-}
-function openCert(title, pdfFile) {
-  let html = `<h3>${title}</h3>
-    <iframe class="cert-preview" src="${pdfFile}" frameborder="0"></iframe>
-    <a class="cert-link" href="${pdfFile}" target="_blank">Download PDF</a>`;
-  document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
-  document.getElementById('modal-bg').style.display = 'block';
-}
-function closeModal() { document.getElementById('modal-bg').style.display = 'none'; }
-document.getElementById('modal-bg').addEventListener('click', function(e) { if(e.target === this) closeModal(); });
-</script>
+      <div class="card" onclick="openProject('Parkinson&#39;s Diagnosis Model','Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.', ['Statastic-Project.png','Statastic-project-2.png'])">
+        <div class="card-title">Parkinson's Diagnosis Model</div>
+        <div>Logistic regression on EHR and demographic data, with custom heatmaps and violin plots.</div>
+      </div>
+
+      <div class="card" onclick="openProject('Project Management Planning','Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.', ['Project-management-1.png','Project-management-2.png','Project-management-3.png','Project-management-4.png'])">
+        <div class="card-title">Project Management Planning</div>
+        <div>Epilepsy device requirements, milestones, risk assessment and stakeholder tracking.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certifications">
+    <h2>Certificates</h2>
+    <div class="cert-list">
+      <div class="cert-card" onclick="openCert('Good Clinical Practice (GCP)', 'Good Clinical Practice (GCP).pdf')">
+        <strong>Good Clinical Practice (GCP)</strong><span>Click to view</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Social-Behavioral Researchers', 'Social:Behavioral Researchers.pdf')">
+        <strong>Social-Behavioral Researchers</strong><span>Click to view</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Data Visualisation', 'Data Visualisation.pdf')">
+        <strong>Data Visualisation</strong><span>Click to view</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Biomedical Researcher', 'Biomedical Researcher.pdf')">
+        <strong>Biomedical Researcher</strong><span>Click to view</span>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact">
       <div>Email: <a href="mailto:sahrashfatima8@gmail.com">sahrashfatima8@gmail.com</a></div>
-      <div>GitHub: <a href="https://github.com/Sahrashfatima" target="_blank">Sahrashfatima</a></div>
-      <div>LinkedIn: <a href="https://linkedin.com/in/sahrash-fatima" target="_blank">linkedin.com/in/sahrash-fatima</a></div>
+      <div>GitHub: <a href="https://github.com/Sahrashfatima" target="_blank" rel="noopener">Sahrashfatima</a></div>
+      <div>LinkedIn: <a href="https://linkedin.com/in/sahrash-fatima" target="_blank" rel="noopener">linkedin.com/in/sahrash-fatima</a></div>
     </div>
   </section>
 
+  <!-- Modal Root -->
   <div id="modal-bg" class="modal-bg">
-    <div class="modal" id="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal" id="modal-content" role="dialog" aria-modal="true" aria-label="Project viewer">
+      <span class="close-btn" onclick="closeModal()" aria-label="Close">&times;</span>
     </div>
   </div>
+
+  <!-- Single consolidated script (lightbox + modal + accessibility) -->
   <script>
-    function openProject(title, description, images) {
-      let html = `<h3>${title}</h3><div>${description}</div>`;
-      if(images && images.length) {
-        html += '<div class="modal-images">';
-        images.forEach(img => { html += `<img src="${img}" alt="Project Image">`; });
-        html += '</div>';
-      }
-      document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
-      document.getElementById('modal-bg').style.display = 'block';
+  (function() {
+    let lightbox = { images: [], index: 0, title: '', desc: '' };
+
+    function setBodyScroll(disabled) {
+      document.documentElement.style.overflow = disabled ? 'hidden' : '';
+      document.body.style.overflow = disabled ? 'hidden' : '';
     }
-    function openCert(title, pdfFile) {
-      let html = `<h3>${title}</h3>
-      <iframe class="cert-preview" src="${pdfFile}" frameborder="0"></iframe>
-      <a class="cert-link" href="${pdfFile}" target="_blank">Download PDF</a>`;
-      document.getElementById('modal-content').innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span>` + html;
-      document.getElementById('modal-bg').style.display = 'block';
+
+    function renderLightbox() {
+      const { images, index, title, desc } = lightbox;
+      const current = images[index];
+
+      const thumbs = images.map((src, i) =>
+        `<img src="${src}" alt="${title} thumbnail ${i+1}"
+              loading="lazy"
+              style="width:90px;height:auto;border-radius:7px;${i===index?'outline:3px solid #a88458;':''};cursor:pointer"
+              onclick="goToImage(${i})">`
+      ).join('');
+
+      const html = `
+        <span class="close-btn" onclick="closeModal()" aria-label="Close">&times;</span>
+        <h3>${title}</h3>
+        <div>${desc}</div>
+        <div class="lightbox" style="display:grid;gap:12px;justify-items:center;text-align:center;margin-top:8px;">
+          <img class="lightbox-main"
+               src="${current}"
+               alt="${title} image ${index+1}"
+               style="max-width:100%;max-height:70vh;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.15)">
+          <div class="lightbox-nav" style="display:flex;gap:12px;align-items:center;">
+            <button class="lightbox-btn" onclick="prevImage()" aria-label="Previous"
+                    style="cursor:pointer;padding:8px 12px;border:1px solid #b8aa94;border-radius:8px;background:#f7eedd;">&#9664; Prev</button>
+            <div>${index + 1} / ${images.length}</div>
+            <button class="lightbox-btn" onclick="nextImage()" aria-label="Next"
+                    style="cursor:pointer;padding:8px 12px;border:1px solid #b8aa94;border-radius:8px;background:#f7eedd;">Next &#9654;</button>
+          </div>
+          <div class="modal-images">${thumbs}</div>
+          <a class="lightbox-btn" href="${current}" target="_blank" rel="noopener"
+             style="cursor:pointer;padding:8px 12px;border:1px solid #b8aa94;border-radius:8px;background:#a88458;color:#fff;text-decoration:none;">Open original</a>
+        </div>
+      `;
+
+      const modalContent = document.getElementById('modal-content');
+      modalContent.classList.add('modal');
+      modalContent.innerHTML = html;
     }
-    function closeModal() { document.getElementById('modal-bg').style.display = 'none'; }
-    document.getElementById('modal-bg').addEventListener('click', function(e) { if(e.target === this) closeModal(); });
+
+    // Expose for HTML onclick handlers
+    window.openProject = function(title, description, images) {
+      lightbox = { images: images || [], index: 0, title, desc: description };
+      renderLightbox();
+      document.getElementById('modal-bg').style.display = 'block';
+      setBodyScroll(true);
+      document.addEventListener('keydown', kbNav);
+    };
+
+    window.openCert = function(title, pdfFile) {
+      const html = `
+        <span class="close-btn" onclick="closeModal()" aria-label="Close">&times;</span>
+        <h3>${title}</h3>
+        <iframe class="cert-preview" src="${pdfFile}" frameborder="0"></iframe>
+        <a class="cert-link" href="${pdfFile}" target="_blank" rel="noopener">Download PDF</a>
+      `;
+      const modalContent = document.getElementById('modal-content');
+      modalContent.classList.add('modal');
+      modalContent.innerHTML = html;
+      document.getElementById('modal-bg').style.display = 'block';
+      setBodyScroll(true);
+      document.addEventListener('keydown', kbNav);
+    };
+
+    window.closeModal = function() {
+      document.getElementById('modal-bg').style.display = 'none';
+      setBodyScroll(false);
+      document.removeEventListener('keydown', kbNav);
+    };
+
+    window.nextImage = function() {
+      if (!lightbox.images.length) return;
+      lightbox.index = (lightbox.index + 1) % lightbox.images.length;
+      renderLightbox();
+    };
+
+    window.prevImage = function() {
+      if (!lightbox.images.length) return;
+      lightbox.index = (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length;
+      renderLightbox();
+    };
+
+    window.goToImage = function(i) {
+      lightbox.index = i;
+      renderLightbox();
+    };
+
+    function kbNav(e) {
+      if (e.key === 'Escape') window.closeModal();
+      if (e.key === 'ArrowRight') window.nextImage();
+      if (e.key === 'ArrowLeft') window.prevImage();
+    }
+
+    // Close when clicking backdrop
+    window.addEventListener('DOMContentLoaded', function() {
+      const bg = document.getElementById('modal-bg');
+      bg.addEventListener('click', function(e) {
+        if (e.target === this) window.closeModal();
+      });
+    });
+  })();
   </script>
 </body>
 </html>
-
-
